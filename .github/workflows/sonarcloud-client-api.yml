@@ -45,5 +45,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"AlexanderVieira_MyAppWithDocker" /o:"alexandervieira" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet "SonarScanner.MSBuild.dll" begin /k:"AVS.Clientes.XUnit" /d:sonar.cs.opencover.reportsPaths="coverage.opencover.xml" /d:sonar.test.exclusions="test/**"
+          dotnet "SonarScanner.MSBuild.dll" begin /k:"AlexanderVieira_MyAppWithDocker" /d:sonar.cs.opencover.reportsPaths="coverage.opencover.xml" /d:sonar.test.exclusions="test/**"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"

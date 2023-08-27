@@ -21,6 +21,10 @@ namespace AVS.Clientes.Api.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
+            _logger.LogInformation("#####################################################");
+            _logger.LogInformation("####  Executando Clientes.Api/GetWeatherForecast");
+            _logger.LogInformation("#####################################################");
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
